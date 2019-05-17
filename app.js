@@ -70,7 +70,7 @@ const articleValidPost = require('./middleware/articleValidPost') /*(req, res, n
 */
 
 // mongoose
-mongoose.connect('mongodb://localhost:27017/blog', { useNewUrlParser: true, useCreateIndex: true });
+mongoose.connect('mongodb://localhost:27017/blog-tristan2', { useNewUrlParser: true, useCreateIndex: true });
 
 // handlebars
 var Handlebars = require("handlebars");
@@ -90,7 +90,7 @@ app.engine('handlebars', exphbs({
 app.set('view engine', 'handlebars');
 app.use('*', (req, res, next) => {
     res.locals.user = req.session.userId;
-    console.log(res.locals.user);
+    // console.log(res.locals.user);
     next()
 })
 
@@ -102,6 +102,7 @@ app.use("/articles/add", auth)
 app.get("/", homePage);
 app.get("/tristan", tristanPage);
 app.get("/user/register", userRegister);
+app.get("user/login", userLogin);
 
 app.get("/contact", function (req, res) {
     res.render("contact")
@@ -143,7 +144,7 @@ app.post("/article/post", auth, articleValidPost, articlePostController)
 
 app.get('/user/create', redirectAuthSucess, userCreate)
 app.post('/user/register', redirectAuthSucess, userRegister)
-app.get('/user/Login', redirectAuthSucess, userLogin)
+app.get('/user/login', redirectAuthSucess, userLogin)
 app.post('/user/LoginAuth', redirectAuthSucess, userLoginAuth)
 app.get('/user/logout', userLogout)
 

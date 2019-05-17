@@ -538,8 +538,16 @@ cite img {
 footer {
     background-color: #171717;
     color: #fff;
-    height: 60px;
-    padding: 20px 20px;
+
+    padding-bottom: 20px;
+
+
+}
+
+footer .fab {
+    font-size: 30px;
+    padding: 10px;
+    color: yellow;
 
 }
 
@@ -1043,4 +1051,129 @@ input[type="radio"]#button-5:checked~.arrows#arrow-4 {
 .fadeInRight {
     -webkit-animation-name: fadeInRight;
     animation-name: fadeInRight;
+}
+
+/*----- REGISTER ------*/
+.register {
+    background-image: url(/assets/ressources/images/eclair.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    /* padding-bottom: 460px; */
+}
+
+
+.card {
+    margin-top: 10em;
+}
+
+
+.p0 {
+    margin-top: 100px;
+    font-size: 500%;
+    color: white;
+    margin-bottom: -70px;
+}
+
+
+
+/* connexion page */
+
+
+/* Made with love by Mutiullah Samim*/
+
+section {
+    padding: 50px 0 60px 0;
+}
+
+.login {
+    background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+    background-size: cover;
+    background-position: center;
+
+    height: 104vh;
+    font-family: 'Numans', sans-serif;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+
+
+.container {
+    height: 100%;
+    align-content: center;
+}
+
+.card2 {
+    height: 370px;
+    margin-top: 18em;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.social_icon span {
+    font-size: 60px;
+    margin-left: 10px;
+    color: #FFC312;
+}
+
+.social_icon span:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.card-header h3 {
+    color: white;
+}
+
+.social_icon {
+    position: absolute;
+    right: -1px;
+    top: -70px;
+}
+
+.input-group-prepend span {
+    width: 50px;
+    background-color: #FFC312;
+    color: black;
+    border: 0 !important;
+}
+
+input:focus {
+    outline: 0 0 0 0 !important;
+    box-shadow: 0 0 0 0 !important;
+
+}
+
+.remember {
+    color: white;
+}
+
+.remember input {
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+.login_btn {
+    color: black;
+    background-color: #FFC312;
+    width: 100px;
+}
+
+.login_btn:hover {
+    color: black;
+    background-color: white;
+}
+
+.links {
+    color: white;
+}
+
+.links a {
+    margin-left: 4px;
 }
