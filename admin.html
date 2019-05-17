@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title> Mon Blog</title>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width+device-width, initial-scale=1">
+
+    <!--Icons -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!--Font-->
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sanchez" rel="stylesheet">
+
+
+
+    <!--styles-->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="ressource/css/style.css">
+
+
+</head>
+
+
+<body>
+
+    <header>
+
+        <nav class="navbar navbar-expand-md bg-light navbar-light fixed-top">
+
+            <div class="container">
+
+                <a class="navbar-brand" href="/">Fantasy Mangas</a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#monMenu"
+                    aria-controls="monMenu" aria-label="Menu pour mobile">
+
+
+                    <span class="navbar-toggler-icon"></span>
+
+
+
+                </button>
+
+                <div class="collapse navbar-collapse" id="monMenu">
+                    <div class="navbar-nav ml-auto">
+
+                        <a class="nav-item nav-link" href="/">Inscription</a>
+                        <a class="nav-item nav-link" href="/">connexion</a>
+                        <a class="nav-item nav-link" href="/">Qui sommes-nous</a>
+                        <a class="nav-item nav-link" href="#nospates">Nos Mangas</a>
+                        <a class="nav-item nav-link" href="#photos">Photos</a>
+
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-12 home-title">
+
+                    <h1 class="title"> Fantasy Mangas </h1>
+
+
+                    <h4 class="second"> Trouver le mangas de vos rêves </h4>
+
+                    <a href="/" class="btn btn-full"> Nos Mangas </a>
+
+                    <a href="/" class="btn btn-ghost"> Contactez-nous </a>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+    </header>
+
+
+
+    <section>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form">
+                                <h2>Contactez-nous</h2>
+                                <p>C'est dans un cadre surprenant, au plus près du bassin, que vous accueille toute
+                                    l'équipe du Restaurant Le Santa Maria sur le Port d'Arcachon. Depuis sa terrasse, le
+                                    point de vue laisse rêveur, alors qu'à l'intérieur la convivialité est de mise..</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="phone">
+                                <i class="fas fa-phone"></i> 06.52.09.28.24
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="adress">
+                                <i class="fas fa-map-marker-alt"></i> Centre Nautique Pierre Mallet - Port de Plaisance,
+                                33120 Arcachon
+
+                                <br>
+                                <br>
+                                <br>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <form>
+                        <!-- Nom et Email -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="contact-form">
+                                    <label>Nom:</label>
+                                    <input type="text" id="name" />
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="contact-form">
+                                    <label>Email:</label>
+                                    <input type="email" id="email" placeholder="Ajouter votre email" />
+                                    <small>Vous ne recevrez pas de publicité.</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service contact -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="contact-form">
+                                    <label> sélectionnez le service</label>
+                                    <select>
+                                        <option>Service client</option>
+                                        <option> Service comptable</option>
+                                        <option> SAV</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="contact-form">
+                                    <label>Votre message:</label>
+                                    <textarea id="message" rows="3" class="contact-message"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bouton envoyer -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="contact-form">
+                                    <button class="btn btn-contact">Envoyer</button>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+
+                    </form>
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11353.252529651907!2d-1.1721205069755483!3d44.651953688647495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd549eded436abab%3A0x22f30fe45a3ac536!2sRestaurant+Le+Santa+Maria!5e0!3m2!1sfr!2sfr!4v1552232610403"
+                            width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <footer>
+        <div class="copyright">
+            <p> Site de Mangas - 2019. <a href="/"> Mentions légales </a></p>
+        </div>
+
+
+    </footer>

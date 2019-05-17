@@ -1,0 +1,25 @@
+{
+  "name": "site-nodejs",
+  "version": "1.0.0",
+  "description": "mon premier site refait en Node-js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tristan",
+  "license": "ISC",
+  "dependencies": {
+    "animate.css": "^3.7.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^2.0.3",
+    "express": "^4.16.4",
+    "express-fileupload": "^1.1.4",
+    "express-handlebars": "^3.0.2",
+    "express-session": "^1.16.1",
+    "handlebars-helpers": "^0.10.0",
+    "handlebars.moment": "^1.0.4",
+    "mongoose": "^5.5.7"
+  }
+}
