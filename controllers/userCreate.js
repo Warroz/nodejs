@@ -4,3 +4,9 @@ module.exports = (req, res) => {
         data: req.flash('data')[0]
     })
 }
+
+
+
+
+
+

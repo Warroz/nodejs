@@ -1,15 +1,17 @@
 const bcrypt = require('bcryptjs')
 
-const user = require('../database/models/user')
+const User = require('../database/models/User')
 
 module.exports = (req, res) => {
     const { email, password } = req.body;
 
-    user.findOne({ email }, (error, user) => {
+    User.findOne({ email }, (error, user) => {
         if (user) {
             bcrypt.compare(password, user.password, (error, same) => {
 
                 if (same) {
+                    console.log(user._id);
+
                     req.session.userId = user._id
                     res.redirect('/')
                 } else {

@@ -8,7 +8,7 @@ const MongoStore = require('connect-mongo');
 const connectFlash = require('connect-flash');
 const { stripTags } = require("./helpers/hbs");
 
-// const path = require('path');
+
 
 
 
@@ -31,6 +31,8 @@ const userLogout = require('./controllers/userLogout')
 // login
 
 const app = express();
+
+mongoose.connect('mongodb://localhost:27017/blog-tristan2', { useNewUrlParser: true, useCreateIndex: true });
 
 const mongoStore = MongoStore(expressSession)
 
@@ -59,26 +61,19 @@ app.use(fileupload())
 // middleware
 const auth = require("./middleware/auth");
 const redirectAuthSucess = require("./middleware/redirectAuthSucess")
-// Middleware
-const articleValidPost = require('./middleware/articleValidPost') /*(req, res, next) => {
-    if(!req.files) {
-        return res.redirect('/')
-    }
-    console.log("je suis le middleware");
-    next()
-}
-*/
 
-// mongoose
-mongoose.connect('mongodb://localhost:27017/blog-tristan2', { useNewUrlParser: true, useCreateIndex: true });
+
+// Middleware
+const articleValidPost = require('./middleware/articleValidPost')
+
+
 
 // handlebars
 var Handlebars = require("handlebars");
 var MomentHandler = require("handlebars.moment");
 MomentHandler.registerHelpers(Handlebars);
 
-// // post
-// const Post = require("./database/models/Article")
+
 
 // Route 
 app.engine('handlebars', exphbs({
@@ -90,7 +85,6 @@ app.engine('handlebars', exphbs({
 app.set('view engine', 'handlebars');
 app.use('*', (req, res, next) => {
     res.locals.user = req.session.userId;
-    // console.log(res.locals.user);
     next()
 })
 
@@ -101,8 +95,14 @@ app.use("/articles/add", auth)
 // route PAGES
 app.get("/", homePage);
 app.get("/tristan", tristanPage);
-app.get("/user/register", userRegister);
-app.get("user/login", userLogin);
+app.post("/user/register", userRegister);
+app.post("/user/login", userLogin);
+
+
+app.get("/partials/articles", function (req, res) {
+    res.render("articles")
+})
+
 
 app.get("/contact", function (req, res) {
     res.render("contact")
@@ -110,66 +110,27 @@ app.get("/contact", function (req, res) {
 
 // Articles
 app.get("/articles/add", auth, articleAddController)
-// res.render("articles")
 app.get("/articles/:id", articleSingleController)
-// async (req, res) => {
-//     const article = await Post.findById(req.params.id)
-//     res.render("articles", {article})
-// })
-
-// app.get ("/article/add", (req, res) => {
-//     res.render("article/add")
-// })
 app.post("/article/post", auth, articleValidPost, articlePostController)
 
-
-// (req, res) => {
-//     const {image} = req.files
-//     const uploadFile = path.resolve(__dirname, 'public/articles', image.name)
-
-//     image.mv(uploadFile, (error) => {
-//         Post.create(
-//             {
-//                 ...req.body,
-//                 image: `/articles/${image.name}`
-//             }
-
-//             , (error, post) => {
-//             res.redirect("/")
-//         })
-//     })
 
 
 // user
 
 app.get('/user/create', redirectAuthSucess, userCreate)
-app.post('/user/register', redirectAuthSucess, userRegister)
 app.get('/user/login', redirectAuthSucess, userLogin)
-app.post('/user/LoginAuth', redirectAuthSucess, userLoginAuth)
 app.get('/user/logout', userLogout)
+app.post('/user/LoginAuth', redirectAuthSucess, userLoginAuth)
+app.post('/user/register', redirectAuthSucess, userRegister)
 
-// console.log(req.body);
-// })
-
-
-
-
-
-// contact
-
-// app.get("/contact", (req, res) => {
-//     res.render("contact")
-// })
-// app.use((req, res) => {
-//     res.render('error404')
-// })
 
 
 app.listen(8000, () => {
 
-    //console.log("Le serveur tourne sur le port 3000");
+    console.log("Le serveur tourne sur le port 8000");
     console.log(`http://localhost:8000`);
 })
+
 
 
 

@@ -2,10 +2,10 @@
 
 
 module.exports = (req, res) => {
-    // const posts = await Post.find({})
+
 
     res.render("tristan")
-    // { posts }
-    console.log("tristan");
+
+    console.log("tristan"); // 
 
 }
