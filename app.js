@@ -109,8 +109,8 @@ app.get("/contact", function (req, res) {
 })
 
 // Articles
-app.get("/ajout/add",      articleAddController)
-//                   auth,
+app.get("/ajout/add", articleAddController)
+                //   auth
 app.get("/articles/:id", articleSingleController)
 app.post("/article/post", auth, articleValidPost, articlePostController)
 

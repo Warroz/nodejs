@@ -1177,3 +1177,25 @@ input:focus {
 .links a {
     margin-left: 4px;
 }
+
+
+/* page add article */
+
+.is-fullhd {
+    margin-top: 230px;
+    background: white;
+    border-radius: 10px;
+    height: 70%;
+    padding-top: 35px;
+    width: 912px;
+}
+
+
+.section {
+    background-image: url(/assets/ressources/images/chemin.jpg);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  height: 91vh;
+}
+
