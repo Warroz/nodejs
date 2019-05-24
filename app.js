@@ -90,7 +90,7 @@ app.use('*', (req, res, next) => {
 
 // route USER
 app.use("/article/post", articleValidPost)
-app.use("/articles/add", auth)
+// app.use("/ajout/add", auth)
 
 // route PAGES
 app.get("/", homePage);
@@ -99,7 +99,7 @@ app.post("/user/register", userRegister);
 app.post("/user/login", userLogin);
 
 
-app.get("/partials/articles", function (req, res) {
+app.get("/articles", function (req, res) {
     res.render("articles")
 })
 
@@ -109,7 +109,8 @@ app.get("/contact", function (req, res) {
 })
 
 // Articles
-app.get("/articles/add", auth, articleAddController)
+app.get("/ajout/add",      articleAddController)
+//                   auth,
 app.get("/articles/:id", articleSingleController)
 app.post("/article/post", auth, articleValidPost, articlePostController)
 

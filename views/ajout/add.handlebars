@@ -1,0 +1,43 @@
+<section class="section">
+  <div class="container is-fullhd">
+    <form>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Titre</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" name="title" placeholder="Titre">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Auteur</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" name="author" placeholder="Auteur">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Contenu </label>
+        <textarea class="form-control" name="content" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <script>
+          CKEDITOR.replace('content');
+        </script>
+      </div>
+
+      <div class="file">
+        <label class="file-label">
+          <input class="file-input" type="file" name="image">
+          <span class="file-cta">
+            <span class="file-icon">
+              <i class="fas fa-upload"></i>
+            </span>
+            <span class="file-label">
+              Envoyer une image aux format jpg
+            </span>
+          </span>
+        </label>
+      </div>
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="btn btn-full">Submit</button>
+        </div>
+        <div class="control">
+          <button class="btn btn-full">Cancel</button>
+        </div>
+    </form>
+  </div>
+</section>
